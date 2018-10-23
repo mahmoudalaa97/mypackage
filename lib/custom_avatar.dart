@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 
 class CustomCircleAvatar extends StatefulWidget {
-  NetworkImage myImage;
+  final NetworkImage myImage;
 
-  String initials;
+  final String initials;
 
+  const CustomCircleAvatar({Key key, this.myImage, this.initials})
+      : super(key: key);
 
-  CustomCircleAvatar({this.myImage, this.initials});
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return new _CustomCircleAvatarState();
-  }
-
+  _CustomCircleAvatarState createState() => _CustomCircleAvatarState();
 }
 
-class _CustomCircleAvatarState extends State<CustomCircleAvatar>{
-
+class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
   bool _checkLoading = true;
 
   @override
   void initState() {
+    super.initState();
     widget.myImage.resolve(new ImageConfiguration()).addListener((_, __) {
       if (mounted) {
         setState(() {
@@ -32,8 +29,14 @@ class _CustomCircleAvatarState extends State<CustomCircleAvatar>{
 
   @override
   Widget build(BuildContext context) {
-    return _checkLoading == true ? new CircleAvatar(
-      child: new Text(widget.initials),radius: 25.4,) : new CircleAvatar(
-      backgroundImage: widget.myImage,radius: 25.4,);
+    return _checkLoading == true
+        ? new CircleAvatar(
+            child: new Text(widget.initials),
+            radius: 25.4,
+          )
+        : new CircleAvatar(
+            backgroundImage: widget.myImage,
+            radius: 25.4,
+          );
   }
 }
