@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class CustomCircleAvatar extends StatefulWidget {
   final NetworkImage myImage;
 
-  final String initials;
+  final Text text;
+  final double radius;
 
-  const CustomCircleAvatar({Key key, this.myImage, this.initials})
+  const CustomCircleAvatar({Key key, this.myImage, this.text,this.radius})
       : super(key: key);
 
   @override
@@ -31,12 +32,12 @@ class _CustomCircleAvatarState extends State<CustomCircleAvatar> {
   Widget build(BuildContext context) {
     return _checkLoading == true
         ? new CircleAvatar(
-            child: new Text(widget.initials),
-            radius: 25.4,
+            child: widget.text,
+            radius: widget.radius,
           )
         : new CircleAvatar(
             backgroundImage: widget.myImage,
-            radius: 25.4,
+            radius: widget.radius,
           );
   }
 }
