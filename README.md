@@ -20,6 +20,8 @@ mypackage: ^0.0.*
 ```
 
 ## Usage
+* Show [Example](https://github.com//mahmoudalaa97/mypackage/blob/master/example/example.dart)
+### How to use
 ```dart
  import  'package:flutter/material.dart';
  import  'package:mypackage/mypackage.dart';
@@ -42,11 +44,10 @@ class ExampleState extends State<Example> {
           appBar: AppBar(title: Text("Example"), centerTitle: true),
           body: new ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-            return new Center(
-                child: new CustomCircleAvatar(
+            return new Center( child: new CustomCircleAvatar(
                     myImage: NetworkImage(
                         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
-                    text: new Text("Person"));
+                    text: new Text("Person")));
           }),
         ));
   }
