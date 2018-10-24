@@ -8,3 +8,4 @@
 ## [0.0.4] -  Change
 *  initials (String) => text (Text) 
 * to more flexibly to change style and control of Text
+## [0.0.5] - SomeFix

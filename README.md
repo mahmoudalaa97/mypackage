@@ -12,19 +12,21 @@ To use this package :
   dependencies:
     flutter:
       sdk: flutter
-    mypackage: ^0.0.4
+    mypackage: ^0.0.5
 ```
+## Screenshots
+<a href="https://imgflip.com/gif/2kt0vg"><img src="https://i.imgflip.com/2kt0vg.gif" title="made at imgflip.com"/></a>
 ## Installation
 ```yaml
-mypackage: ^0.0.*
+mypackage: ^0.0.5
 ```
 
 ## Usage
 * Show [Example](https://github.com//mahmoudalaa97/mypackage/blob/master/example/example.dart)
 ### How to use
 ```dart
- import  'package:flutter/material.dart';
- import  'package:mypackage/mypackage.dart';
+  import  'package:flutter/material.dart';
+  import  'package:mypackage/mypackage.dart';
 
 void main() {
   runApp(Example());
